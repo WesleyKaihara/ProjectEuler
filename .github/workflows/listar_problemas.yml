@@ -20,7 +20,7 @@ jobs:
           git config --local user.email "wesleykaihara@gmail.com"
           git config --local user.name "Wesley"
           git add README.md
-          git commit -m "Novo problema"
+          git commit -m "Listagem dos problemas"
 
       - name: Enviar Novo README
         uses: ad-m/github-push-action@master
