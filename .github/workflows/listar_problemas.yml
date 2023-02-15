@@ -16,7 +16,8 @@ jobs:
         run: sh doc.sh > README.md
 
       - name: Criar Commit Atualizado
-        run: git config --local user.email "wesleykaihara@gmail.com"
+        run: |
+          git config --local user.email "wesleykaihara@gmail.com"
           git config --local user.name "Wesley"
           git add README.md
           git commit -m "Novo problema"
