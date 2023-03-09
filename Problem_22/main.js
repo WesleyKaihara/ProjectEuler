@@ -1,8 +1,8 @@
-// Usando names.txt (clique com o botão direito do mouse e 'Salvar link/destino como...'), um arquivo de texto de 46K contendo mais de cinco mil nomes, comece classificando-o em ordem alfabética. Em seguida, calculando o valor alfabético para cada nome, multiplique esse valor por sua posição alfabética na lista para obter uma pontuação de nome.
+// Using names.txt (right click and 'Save Link/Target As...'), a 46K text file containing over five-thousand first names, begin by sorting it into alphabetical order. Then working out the alphabetical value for each name, multiply this value by its alphabetical position in the list to obtain a name score.
 
-// Por exemplo, quando a lista é classificada em ordem alfabética, COLIN, que vale 3 + 15 + 12 + 9 + 14 = 53, é o 938º nome da lista. Assim, COLIN obteria uma pontuação de 938 × 53 = 49714.
+// For example, when the list is sorted into alphabetical order, COLIN, which is worth 3 + 15 + 12 + 9 + 14 = 53, is the 938th name in the list. So, COLIN would obtain a score of 938 × 53 = 49714.
 
-// Qual é o total de todas as pontuações de nomes no arquivo?
+// What is the total of all the name scores in the file?
 
 const fs = require('fs');
 
@@ -23,7 +23,6 @@ fs.readFile(`${__dirname}/data.txt`, 'utf8' , (err, data) => {
       score+=letras[nome[i]]
     }
     total+=score*(index+1)
-    console.log(nome, score, index, index+1)
   })
   console.log(total)
 });
